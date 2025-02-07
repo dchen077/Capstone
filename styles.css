@@ -4,4 +4,5 @@ nav a, nav a:link, nav a:visited {
 
 h1 {
     font-size: 30px; /* medium-link size */
+    margin-bottom: 1rem; /* Adds space between h1 and nav */
 }
