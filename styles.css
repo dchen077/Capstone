@@ -1,8 +1,7 @@
-nav a, nav a:link, nav a:visited {
-    font-size: 20px; /* small-link size */
+.small-link {
+    font-size: 20px; /* Adjust as needed */
 }
 
-h1 {
-    font-size: 30px; /* medium-link size */
-    margin-bottom: 1rem; /* Adds space between h1 and nav */
+.medium-link {
+    font-size: 30px; /* Adjust as needed */
 }
