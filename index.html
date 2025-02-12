@@ -2,23 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
-    <title>Capstone Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consolidated Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .tab { display: flex; cursor: pointer; padding: 10px; background: #ddd; margin-right: 5px; }
+        .tab:hover { background: #bbb; }
+        .tab-content { display: none; padding: 20px; border: 1px solid #ddd; margin-top: 10px; }
+        .active { display: block; }
+    </style>
 </head>
 <body>
-    <h1>This is for Capstone Demo purpose only.</h1>
-    <nav>
-        <a class="medium-link">Inauthentic Behavior</a><br>
-        <a href="advertisercircumvention.html" class="small-link">NT: Advertiser Circumvention</a><br>
-        <a href="bruteforcing.html" class="small-link">NT: Brute Forcing</a><br>
-        <a href="circumvention.html" class="small-link">NT: Circumvention</a><br>
-        <a href="crisisexploitads.html" class="small-link">NT: Crisis Exploitation Ads</a><br>
-        <a href="imitatioofsf.html" class="small-link">NT: Imitation of System Functionality</a><br>
-        <a href="icattacks.html" class="small-link">NT: Intentional/Coordinated Attacks</a><br>
-        <a href="misusereport.html" class="small-link">NT: Misuse of Reporting Systems</a><br>
-        <a href="privateusergcn.html" class="small-link">NT: Private User & Government Coordination Networks</a><br>
-        <a href="typosquatting.html" class="small-link">NT: Typosquatting</a><br><br><br>
-        <a href="frauddecep.html" class="small-link">RT: Fraud & Deception</a>
-    </nav>
+
+    <h2>Capstone Demo - Consolidated Page</h2>
+
+    <!-- Navigation Tabs -->
+    <div id="tabs">
+        <div class="tab" onclick="showContent('advertiser')">Advertiser Circumvention</div>
+        <div class="tab" onclick="showContent('brute')">Brute Forcing</div>
+        <div class="tab" onclick="showContent('circumvention')">Circumvention</div>
+        <div class="tab" onclick="showContent('crisis')">Crisis Exploit Ads</div>
+        <div class="tab" onclick="showContent('fraud')">Fraud Deception</div>
+        <div class="tab" onclick="showContent('icat')">IC Attacks</div>
+        <div class="tab" onclick="showContent('imitation')">Imitation of SF</div>
+        <div class="tab" onclick="showContent('misuse')">Misuse Report</div>
+        <div class="tab" onclick="showContent('private')">Private User GCN</div>
+        <div class="tab" onclick="showContent('typosquatting')">Typosquatting</div>
+    </div>
+
+    <!-- Content Sections -->
+    <div id="advertiser" class="tab-content">
+        <h3>Advertiser Circumvention</h3>
+        <p>Content from advertisercircumvention.html goes here...</p>
+    </div>
+
+    <div id="brute" class="tab-content">
+        <h3>Brute Forcing</h3>
+        <p>Content from bruteforcing.html goes here...</p>
+    </div>
+
+    <div id="circumvention" class="tab-content">
+        <h3>Circumvention</h3>
+        <p>Content from circumvention.html goes here...</p>
+    </div>
+
+    <div id="crisis" class="tab-content">
+        <h3>Crisis Exploit Ads</h3>
+        <p>Content from crisisexploitads.html goes here...</p>
+    </div>
+
+    <div id="fraud" class="tab-content">
+        <h3>Fraud Deception</h3>
+        <p>Content from frauddecep.html goes here...</p>
+    </div>
+
+    <div id="icat" class="tab-content">
+        <h3>IC Attacks</h3>
+        <p>Content from icattacks.html goes here...</p>
+    </div>
+
+    <div id="imitation" class="tab-content">
+        <h3>Imitation of SF</h3>
+        <p>Content from imitationofsf.html goes here...</p>
+    </div>
+
+    <div id="misuse" class="tab-content">
+        <h3>Misuse Report</h3>
+        <p>Content from misusereport.html goes here...</p>
+    </div>
+
+    <div id="private" class="tab-content">
+        <h3>Private User GCN</h3>
+        <p>Content from privateusergcn.html goes here...</p>
+    </div>
+
+    <div id="typosquatting" class="tab-content">
+        <h3>Typosquatting</h3>
+        <p>Content from typosquatting.html goes here...</p>
+    </div>
+
+    <script>
+        function showContent(id) {
+            var contents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active');
+            }
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
